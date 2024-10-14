@@ -1,0 +1,812 @@
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now delete our tables content
+DELETE FROM t_pages;
+DELETE FROM t_panels;
+DELETE FROM t_elements;
+DELETE FROM t_contexts;
+DELETE FROM t_context_lists;
+DELETE FROM t_users;
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- page settings
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (12, 0, 1, 0, '', '', '', 0, '', true, '', 'nouserauth;zerocontext;alwaystest', '');
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create page properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (1, '0', 0, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (1, 0, 0, 1, 'basic', '12;12', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (1, 1, 1, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (2, 1, 2, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (3, 1, 3, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (4, 1, 4, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (5, 1, 5, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (6, 1, 6, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (7, 1, 7, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (8, 1, 8, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (9, 1, 9, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (10, 1, 10, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (11, 1, 11, 'basic', '12;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (12, 1, 12, 'basic', '172;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (13, 1, 13, 'basic', '12;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (14, 1, 14, 'basic', '172;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (15, 1, 15, 'basic', '12;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (16, 1, 16, 'basic', '172;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (17, 1, 17, 'basic', '12;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (18, 1, 18, 'basic', '172;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (19, 1, 19, 'basic', '12;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (20, 1, 20, 'basic', '172;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (21, 1, 21, 'basic', '12;292', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (22, 1, 22, 'basic', '172;292', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (23, 1, 23, 'basic', '12;320', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (24, 1, 24, 'basic', '172;320', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (25, 1, 25, 'basic', '12;348', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (26, 1, 26, 'basic', '172;348', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (27, 1, 27, 'basic', '12;376', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (28, 1, 28, 'basic', '172;376', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (29, 1, 29, 'basic', '172;404', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (1, 0, 416, 436, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (2, 1, 240, 24, '', '-1', '-1', '-1', 0, '', '', 'page record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (3, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (4, 4, 240, 24, '', '1', '1', '1', 1, '', '', '@t_contexts, 0, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (5, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'page_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (6, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "page_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (7, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'record_type');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (8, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "record_type")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (9, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'panel_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (10, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "panel_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (11, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'position_type');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (12, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "position_type")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (13, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'position_values');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (14, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "position_values")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (15, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'cycling_settings');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (16, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "cycling_settings")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (17, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'cycling_count');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (18, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "cycling_count")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (19, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'data_inh_style');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (20, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "data_inheritance_style")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (21, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'creation_condition');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (22, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "creation_condition")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (23, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'action_gdl');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (24, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "action_generaldatalink")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (25, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'action_determ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (26, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "action_determination")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (27, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'action_value');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (28, 4, 240, 24, '', '1', '1', '1', 0, '', '', 'dbref("t_pages", readctxt(0), "action_value")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (29, 5, 240, 24, '', '1', '1', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create panel properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (2, '0', 1, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (2, 0, 0, 2, 'basic', '440;12', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (30, 2, 30, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (31, 2, 31, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (32, 2, 32, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (33, 2, 33, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (34, 2, 34, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (35, 2, 35, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (36, 2, 36, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (37, 2, 37, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (38, 2, 38, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (39, 2, 39, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (40, 2, 40, 'basic', '12;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (41, 2, 41, 'basic', '172;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (42, 2, 42, 'basic', '12;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (43, 2, 43, 'basic', '172;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (44, 2, 44, 'basic', '12;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (45, 2, 45, 'basic', '172;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (46, 2, 46, 'basic', '12;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (47, 2, 47, 'basic', '172;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (48, 2, 48, 'basic', '12;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (49, 2, 49, 'basic', '172;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (50, 2, 50, 'basic', '172;404', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (30, 0, 416, 436, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (31, 1, 240, 24, '', '-1', '-1', '-1', 0, '', '', 'panel record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (32, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (33, 4, 240, 24, '', '2', '2', '2', 1, '', '', '@t_contexts, 1, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (34, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'panel_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (35, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "panel_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (36, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'element_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (37, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "element_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (38, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'position_type');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (39, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "position_type")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (40, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'position_values');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (41, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "position_values")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (42, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'cycling_settings');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (43, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "cycling_settings")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (44, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'cycling_count');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (45, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "cycling_count")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (46, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'data_inh_style');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (47, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "data_inheritance_style")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (48, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'creation_condition');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (49, 4, 240, 24, '', '2', '2', '2', 0, '', '', 'dbref("t_panels", readctxt(1), "creation_condition")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (50, 5, 240, 24, '', '2', '2', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create element properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (3, '0', 2, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (3, 0, 0, 3, 'basic', '868;12', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (51, 3, 51, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (52, 3, 52, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (53, 3, 53, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (54, 3, 54, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (55, 3, 55, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (56, 3, 56, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (57, 3, 57, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (58, 3, 58, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (59, 3, 59, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (60, 3, 60, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (61, 3, 61, 'basic', '12;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (62, 3, 62, 'basic', '172;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (63, 3, 63, 'basic', '12;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (64, 3, 64, 'basic', '172;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (65, 3, 65, 'basic', '12;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (66, 3, 66, 'basic', '172;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (67, 3, 67, 'basic', '12;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (68, 3, 68, 'basic', '172;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (69, 3, 69, 'basic', '12;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (70, 3, 70, 'basic', '172;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (71, 3, 71, 'basic', '12;292', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (72, 3, 72, 'basic', '172;292', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (73, 3, 73, 'basic', '12;320', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (74, 3, 74, 'basic', '172;320', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (75, 3, 75, 'basic', '12;348', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (76, 3, 76, 'basic', '172;348', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (77, 3, 77, 'basic', '172;404', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (51, 0, 416, 436, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (52, 1, 240, 24, '', '-1', '-1', '-1', 0, '', '', 'element record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (53, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (54, 4, 240, 24, '', '3', '3', '3', 1, '', '', '@t_contexts, 2, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (55, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'element_type');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (56, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "element_type")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (57, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'width');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (58, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "width")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (59, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'height');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (60, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "height")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (61, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'extrastyle');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (62, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "extrastyle")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (63, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'upi_receive');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (64, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "upi_receive")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (65, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'upi_trigger');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (66, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "upi_trigger")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (67, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'upi_onsave');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (68, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "upi_onsave")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (69, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'send_on_change');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (70, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "send_on_change")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (71, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'click_action');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (72, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "click_action")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (73, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'tooltip');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (74, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "tooltip")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (75, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'generaldatalink');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (76, 4, 240, 24, '', '3', '3', '3', 0, '', '', 'dbref("t_elements", readctxt(2), "generaldatalink")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (77, 5, 240, 24, '', '3', '3', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create contexts properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (4, '0', 3, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (4, 0, 0, 4, 'basic', '12;460', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (78, 4, 78, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (79, 4, 79, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (80, 4, 80, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (81, 4, 81, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (82, 4, 82, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (83, 4, 83, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (84, 4, 84, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (85, 4, 85, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (86, 4, 86, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (87, 4, 87, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (88, 4, 88, 'basic', '172;152', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (78, 0, 416, 180, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (79, 1, 320, 24, '', '-1', '-1', '-1', 0, '', '', 'context record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (80, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (81, 4, 240, 24, '', '4', '4', '4', 1, '', '', '@t_contexts, 3, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (82, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'context_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (83, 4, 240, 24, '', '4', '4', '4', 0, '', '', 'dbref("t_contexts", readctxt(3), "context_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (84, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'row_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (85, 4, 240, 24, '', '4', '4', '4', 0, '', '', 'dbref("t_contexts", readctxt(3), "row_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (86, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'row_value');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (87, 4, 240, 24, '', '4', '4', '4', 0, '', '', 'dbref("t_contexts", readctxt(3), "row_value")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (88, 5, 240, 24, '', '4', '4', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create context templates properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (5, '0', 4, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (5, 0, 0, 5, 'basic', '440;460', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (89, 5, 89, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (90, 5, 90, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (91, 5, 91, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (92, 5, 92, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (93, 5, 93, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (94, 5, 94, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (95, 5, 95, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (96, 5, 96, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (97, 5, 97, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (98, 5, 98, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (99, 5, 99, 'basic', '172;152', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (89, 0, 416, 180, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (90, 1, 320, 24, '', '-1', '-1', '-1', 0, '', '', 'context template record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (91, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (92, 4, 240, 24, '', '5', '5', '5', 1, '', '', '@t_contexts, 4, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (93, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'context_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (94, 4, 240, 24, '', '5', '5', '5', 0, '', '', 'dbref("t_context_templates", readctxt(4), "context_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (95, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'row_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (96, 4, 240, 24, '', '5', '5', '5', 0, '', '', 'dbref("t_context_templates", readctxt(4), "row_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (97, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'row_value');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (98, 4, 240, 24, '', '5', '5', '5', 0, '', '', 'dbref("t_context_templates", readctxt(4), "row_value")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (99, 5, 240, 24, '', '5', '5', '-1', 1, 'save', '', 'save record'); 
+
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create context lists properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (6, '0', 5, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (6, 0, 0, 6, 'basic', '868;460', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (100, 6, 100, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (101, 6, 101, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (102, 6, 102, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (103, 6, 103, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (104, 6, 104, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (105, 6, 105, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (106, 6, 106, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (107, 6, 107, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (108, 6, 108, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (109, 6, 109, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (110, 6, 110, 'basic', '172;152', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (100, 0, 416, 180, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (101, 1, 320, 24, '', '-1', '-1', '-1', 0, '', '', 'context list record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (102, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (103, 4, 240, 24, '', '6', '6', '6', 1, '', '', '@t_contexts, 5, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (104, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'context_id');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (105, 4, 240, 24, '', '6', '6', '6', 0, '', '', 'dbref("t_context_lists", readctxt(5), "context_id")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (106, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'scopeoflife');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (107, 4, 240, 24, '', '6', '6', '6', 0, '', '', 'dbref("t_context_lists", readctxt(5), "context_scopeoflife")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (108, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'lastuse');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (109, 4, 240, 24, '', '6', '6', '6', 0, '', '', 'dbref("t_context_lists", readctxt(5), "context_lastuse")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (110, 5, 240, 24, '', '6', '6', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create users properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (7, '0', 6, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (7, 0, 0, 7, 'basic', '12;652', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (111, 7, 111, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (112, 7, 112, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (113, 7, 113, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (114, 7, 114, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (115, 7, 115, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (116, 7, 116, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (117, 7, 117, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (118, 7, 118, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (119, 7, 119, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (120, 7, 120, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (121, 7, 121, 'basic', '12;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (122, 7, 122, 'basic', '172;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (123, 7, 123, 'basic', '12;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (124, 7, 124, 'basic', '172;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (125, 7, 125, 'basic', '172;208', 'none', 0, 'none', true);
+-- elements
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (111, 0, 416, 244, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (112, 1, 320, 24, '', '-1', '-1', '-1', 0, '', '', 't_users record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (113, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (114, 4, 240, 24, '', '7', '7', '7', 1, '', '', '@t_contexts, 6, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (115, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'user_name');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (116, 4, 240, 24, '', '7', '7', '7', 0, '', '', 'dbref("t_users", readctxt(6), "user_name")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (117, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'user_validation');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (118, 4, 240, 24, '', '7', '7', '7', 0, '', '', 'dbref("t_users", readctxt(6), "user_validation")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (119, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'user_machineid');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (120, 4, 240, 24, '', '7', '7', '7', 0, '', '', 'dbref("t_users", readctxt(6), "user_machineid")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (121, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'lastpresence');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (122, 4, 240, 24, '', '7', '7', '7', 0, '', '', 'dbref("t_users", readctxt(6), "user_lastpresence")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (123, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'user_contextid');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (124, 4, 240, 24, '', '7', '7', '7', 0, '', '', 'dbref("t_users", readctxt(6), "user_contextid")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (125, 5, 240, 24, '', '7', '7', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create server options properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (8, '0', 7, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (8, 0, 0, 8, 'basic', '440;652', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (126, 8, 126, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (127, 8, 127, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (128, 8, 128, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (129, 8, 129, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (130, 8, 130, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (131, 8, 131, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (132, 8, 132, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (133, 8, 133, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (134, 8, 134, 'basic', '172;208', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (126, 0, 416, 244, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (127, 1, 320, 24, '', '-1', '-1', '-1', 0, '', '', 't_serveroptions record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (128, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (129, 4, 240, 24, '', '8', '8', '8', 1, '', '', '@t_contexts, 7, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (130, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'option_name');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (131, 4, 240, 24, '', '8', '8', '8', 0, '', '', 'dbref("t_serveroptions", readctxt(7), "option_name")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (132, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'option_value');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (133, 4, 240, 24, '', '8', '8', '8', 0, '', '', 'dbref("t_serveroptions", readctxt(7), "option_value")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (134, 5, 240, 24, '', '8', '8', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create possible values properties
+-- context data
+INSERT INTO t_contexts (id, context_id, row_id, row_value)
+VALUES (9, '0', 8, '1');
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (9, 0, 0, 9, 'basic', '868;652', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (135, 9, 135, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (136, 9, 136, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (137, 9, 137, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (138, 9, 138, 'basic', '172;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (139, 9, 139, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (140, 9, 140, 'basic', '172;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (141, 9, 141, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (142, 9, 142, 'basic', '172;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (143, 9, 143, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (144, 9, 144, 'basic', '172;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (145, 9, 145, 'basic', '172;208', 'none', 0, 'none', true);
+-- element data
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (135, 0, 416, 244, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (136, 1, 320, 24, '', '-1', '-1', '-1', 0, '', '', 't_possiblevalues record properties');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (137, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'id * selector');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (138, 4, 240, 24, '', '9', '9', '9', 1, '', '', '@t_contexts, 8, "row_value"'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (139, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'group_name');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (140, 4, 240, 24, '', '9', '9', '9', 0, '', '', 'dbref("t_possiblevalues", readctxt(8), "group_name")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (141, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'realvalue');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (142, 4, 240, 24, '', '9', '9', '9', 0, '', '', 'dbref("t_possiblevalues", readctxt(8), "value_realvalue")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (143, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'labelvalue');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (144, 4, 240, 24, '', '9', '9', '9', 0, '', '', 'dbref("t_possiblevalues", readctxt(8), "value_labelvalue")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (145, 5, 240, 24, '', '9', '9', '-1', 1, 'save', '', 'save record'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create max ids panel
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (10, 0, 0, 10, 'basic', '1296;12', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (146, 10, 146, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (147, 10, 147, 'basic', '12;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (148, 10, 148, 'basic', '12;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (149, 10, 149, 'basic', '144;40', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (150, 10, 150, 'basic', '12;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (151, 10, 151, 'basic', '144;68', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (152, 10, 152, 'basic', '12;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (153, 10, 153, 'basic', '144;96', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (154, 10, 154, 'basic', '12;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (155, 10, 155, 'basic', '144;124', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (156, 10, 156, 'basic', '12;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (157, 10, 157, 'basic', '144;152', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (158, 10, 158, 'basic', '12;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (159, 10, 159, 'basic', '144;180', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (160, 10, 160, 'basic', '12;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (161, 10, 161, 'basic', '144;208', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (162, 10, 162, 'basic', '12;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (163, 10, 163, 'basic', '144;236', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (164, 10, 164, 'basic', '12;264', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (165, 10, 165, 'basic', '144;264', 'none', 0, 'none', true);
+-- elements
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (146, 0, 276, 300, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (147, 1, 240, 24, '', '-1', '-1', '-1', 0, '', '', 'max id values of tables');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (148, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_elements: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (149, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_elements")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (150, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_panels: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (151, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_panels")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (152, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_pages: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (153, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_pages")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (154, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_contexts: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (155, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_contexts")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (156, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_context_templ: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (157, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_context_templates")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (158, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_context_lists: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (159, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_context_lists")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (160, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_users: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (161, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_users")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (162, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_serveroptions: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (163, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_serveroptions")'); 
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (164, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 't_possiblevalues: ');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (165, 1, 120, 24, '', '-1', '-1', '-1', 0, '', '', 'maxdbid("t_possiblevalues")'); 
+-- ----------------------------------------------------
+-- ----------------------------------------------------
+-- now create logo panel
+-- page data
+INSERT INTO t_pages (id, page_id, record_type, panel_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition, action_generaldatalink, action_determination, action_value)
+VALUES (11, 0, 0, 11, 'basic', '1296;596', 'none', 0, 'none', true, '', '', '');
+-- panel data
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (166, 11, 166, 'basic', '0;0', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (167, 11, 167, 'basic', '18;12', 'none', 0, 'none', true);
+INSERT INTO t_panels (id, panel_id, element_id, position_type, position_values, cycling_settings, cycling_count, data_inheritance_style, creation_condition)
+VALUES (168, 11, 168, 'basic', '74;264', 'none', 0, 'none', true);
+-- elements
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (166, 0, 276, 300, 'border: 2px solid black; padding: 0px;', '-1', '-1', '-1', 0, '', '', '');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (167, 3, 240, 240, '', '-1', '-1', '-1', 0, '', '', '/assets/prplogo.JPG');
+INSERT INTO t_elements (id, element_type, width, height, extrastyle, upi_receive, upi_trigger, upi_onsave, send_on_change, click_action, tooltip, generaldatalink)
+VALUES (168, 1, 160, 24, '', '-1', '-1', '-1', 0, '', '', 'Potato Rails Project');
+
+
+
+
+
+
+
+
+

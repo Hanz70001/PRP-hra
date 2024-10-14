@@ -1,0 +1,275 @@
+<% # app/views/dashboard/show.html.erb %>
+
+<% # hello, this is main function used for generating page of control panels %>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<% # page outline: %>
+<% #    first part - noncyclic %>
+<% #        1. include of general files %>
+<% #        3. processing of page opening actions %>
+<% #        2. context validation and evaluation %>
+<% #    second part - cyclic nested %>
+<% #        4. branching of page %>
+<% #        5. branching of panel %>
+<% #        6. creation of element %>
+
+<% # here we go... %>
+
+<% # first part - noncyclic                 ----------------------------------------------------------------- %>
+<% # -------------------------------------------------------------------------------------------------------- %>
+<% # -------------------------------------------------------------------------------------------------------- %>
+<% # -------------------------------------------------------------------------------------------------------- %>
+
+<% # temporary filled control variables %>
+<% usedpage = @page.to_i %>
+<% usedcontext = @context %>
+<% usedtest = @test %>
+<% usercontrolresult = 1 %>
+<% page_noauthredir = "-1" %>
+<% centeredpage = 0 %>
+
+<% if usedpage != 0 %>
+        <%= stylesheet_link_tag 'customstyle', media: 'all' %>
+<% else %>
+        <%= stylesheet_link_tag 'buildstyle', media: 'all' %>
+<% end %>
+
+<% # 1. include of general files            ----------------------------------------------------------------- %>
+
+<% # 2. processing of page opening actions  ----------------------------------------------------------------- %>
+
+<% if usedtest != "nopageactions" %>
+        <% page_actions = Page.where(page_id: usedpage, record_type: 1) %>
+        <% page_actions.each do |pageactions| %>
+                <% pageaction = pageactions.action_determination.split(";") %>
+                <% pageaction.each do |pageaction_determination| %>
+                        <% case pageaction_determination %>
+                                <% when "nouserauth" %>
+                                        <% usercontrolresult = 2 %>
+                                <% when "zerocontext" %>
+                                        <% usedcontext = "0" %>
+                                <% when "alwaystest" %>
+                                        <% usedtest = "1" %>
+                                <% when "onlytest" %>
+                                        <% if usedtest != 1 then usercontrolresult = 0 end %>
+                                <% when "noauthredir" %>
+                                        <% page_noauthredi = pageactions.action_value %>
+                                <% when "centerpage" %>
+                                        <div style="display: flex; justify-content: center; align-items: flex-start; height: 100vh; width: <%= pageactions.action_value %>px; margin-left: auto; margin-right: auto; position: relative;">
+                        <% end # case pageaction.action_determination %>
+                <% end # page_action.each do |pageaction_determination| %>
+        <% end # page_actions.each do |pageaction| %>
+<% end # if test != "nopageactions" %>
+
+<% # 3. context validation and evaluation   ----------------------------------------------------------------- %>
+
+<% # now allowed context %>
+<% availablecontext = userverification(@user_ip, @user_session, usedcontext) %>
+<% # puts "user_ip:" + @user_ip + ", user_session:" + @user_session %>
+<% # puts "usedcontext:" + usedcontext + ", availablecontext:" + availablecontext %>
+
+<% if usercontrolresult == 1 && usedtest == "0" && (usedcontext != availablecontext || availablecontext == "-1") %>
+        <% if availablecontext == "-1" %> 
+
+                <% nouserpage = ServerOption.where(option_name: "nouserpage").pluck(:option_value).first %>
+                <% nouserpage = nouserpage.nil? ? "-1" : nouserpage %>
+
+                <% if nouserpage == "-1" %>
+                        <p>Access Denied</p>
+                <% else %>
+
+                        <%= javascript_tag do %>
+                                var currentUrl = new URL(window.location);
+                                
+                                <% if page_noauthredir == "-1" %>
+                                        currentUrl.searchParams.set('page', '<%= nouserpage %>');
+                                <% else %>
+                                        currentUrl.searchParams.set('page', '<%= page_noauthredir %>');
+                                <% end %>
+
+                                window.location.href = currentUrl.toString();
+                        <% end %>
+
+                <% end %>
+        <% else %>
+                <%= javascript_tag do %>
+                        var currentUrl = new URL(window.location);
+
+                        currentUrl.searchParams.set('context', '<%= availablecontext %>');
+
+                        window.location.href = currentUrl.toString();
+                <% end %>
+        <% end %> 
+        <% usercontrolresult = 0 %>
+<% end %>
+
+<% # puts "usercontrolresult:" + usercontrolresult.to_s %> 
+<% if usercontrolresult > 0 %> 
+
+        <% # second part - cyclic nested            ----------------------------------------------------------------- %>
+        <% # -------------------------------------------------------------------------------------------------------- %>
+        <% # -------------------------------------------------------------------------------------------------------- %>
+        <% # -------------------------------------------------------------------------------------------------------- %>
+
+        <% # variables for nesting %>
+
+        <% position_page = "0;0" %>
+        <% position_panel = "0;0" %>
+        <% position_element = "0;0" %>
+        <% position_elementsplitted = [] %>
+        <% position_prevpanel = "0;0" %>
+        <% position_prevelement = "0;0" %>
+        <% panelcyclicparams = "" %>
+        <% elementcyclicparams = "" %>
+        <% element_creationcondition = "" %>
+        <% element_generalvalue = "" %>
+        <% panelcyclinglist = [] %>
+        <% panelcyclinglist_secondary = [] %>
+
+        <% # 4. branching of page start             ----------------------------------------------------------------- %>
+
+                <% page_records = Page.where(page_id: usedpage, record_type: 0) %>
+
+                <% page_records.each do |innerpanelrecord| %>
+                
+                        <% innerpanelid = innerpanelrecord.panel_id %>
+
+                        <% # now cycling params %>
+                        <% case innerpanelrecord.cycling_settings %>
+                                <% when "none" %>
+                                        <% panelcyclinglist = ["1"] %>
+                                <% when "listfromfunc" %>
+                                        <% panelcyclinglist = maintools_generaldatalink("read", innerpanelrecord.cycling_count, "0", "", usedcontext) %>
+                                <% when "listfrom2funcs" %>
+                                        <% partofcyclingcount = innerpanelrecord.cycling_count.split(";") %>
+                                        <% panelcyclinglist = maintools_generaldatalink("read", partofcyclingcount[0], "0", "", usedcontext) %>
+                                        <% panelcyclinglist_secondary = maintools_generaldatalink("read", partofcyclingcount[1], "0", "", usedcontext) %>
+                        <% end # case innerpanelrecord.cycling_setting %>
+
+                        <% panelcyclinglist.each_with_index do |panelcyclingvalue, index| %>
+                                <% case innerpanelrecord.data_inheritance_style %>
+                                        <% when "none" %>
+                                                <% panelcyclicparams = "1;1;1" %>
+                                        <% when "val+index" %>
+                                                <% panelcyclicparams = panelcyclingvalue.to_s + ";" + index.to_s + ";1" %>
+                                        <% when "val+index+val2" %>
+                                                <% panelcyclicparams = panelcyclingvalue.to_s + ";" + index.to_s + ";" + panelcyclinglist_secondary[index].to_s %>
+                                <% end # case innerpanelrecord.data_inheritance_style %>
+
+                                
+
+        <% # 5. branching of panel start            ----------------------------------------------------------------- %>
+
+                                <% panel_records = Panel.where(panel_id: innerpanelid) %>
+
+                                <% position_panel = parametricposition(innerpanelrecord.position_type, innerpanelrecord.position_values, position_page, position_prevpanel, panelcyclicparams) %>
+                                <% position_prevelement = position_panel + ";0;0" %>
+                                <% position_prevpanel = position_panel + ";0;0" %>
+
+                                <% panel_records.each do |innerelementrecord| %>     
+
+        <% # 6. creation of element start           ----------------------------------------------------------------- %>
+
+                                        <% elementcyclicparams = panelcyclicparams + ";1;1;1" %>
+
+                                        <% element_record = Element.find_by(id: innerelementrecord.element_id) %>
+
+                                        <% break if element_record.nil? %>
+
+                                        <% element_creationcondition = !!maintools_generaldatalink("read", innerelementrecord.creation_condition, "0", elementcyclicparams, usedcontext) %>
+
+                                        <% break if element_creationcondition != true %>
+
+                                        <% position_element = parametricposition(innerelementrecord.position_type, innerelementrecord.position_values, position_panel, position_prevelement, elementcyclicparams) %>
+                                        <% position_elementsplitted = position_element.split(";") %>
+                                        <% position_prevelement = position_elementsplitted[0].to_s + ";" + position_elementsplitted[1].to_s + ";" + element_record.width.to_s + ";" + element_record.height.to_s %>
+                                        
+                                        <% element_generalvalue = maintools_generaldatalink("read", element_record.generaldatalink, "0", elementcyclicparams, usedcontext) %>
+
+                                        <% # header data of element for identification %>
+
+                                        <div id="element_<%= element_record.id %>" 
+                                                data-element-id="<%= element_record.id.to_s + "_" + elementcyclicparams %>"           
+                                                data-element-type="<%= element_record.element_type %>"              
+                                                data-upi-receive="<%= element_record.upi_receive %>" 
+                                                data-upi-trigger="<%= element_record.upi_trigger %>" 
+                                                data-upi-onsave="<%= element_record.upi_onsave %>"
+                                                data-send-on-change="<%= element_record.send_on_change %>"
+                                                data-generaldatalink="<%= element_record.generaldatalink %>"
+                                                data-click-action="<%= element_record.click_action %>"
+                                                data-inherited-values="<%= elementcyclicparams %>"
+                                                style="<%= element_record.extrastyle %> position: absolute; top: <%= position_elementsplitted[1] %>px; left: <%= position_elementsplitted[0] %>px; width: <%= element_record.width %>px; height: <%= element_record.height %>px; display: flex; align-items: center; "
+                                                <% if usedtest == "1" %>
+                                                        title="element id: <%= element_record.id %>"
+                                                <% else %>
+                                                        <% if element_record.tooltip != "" %>
+                                                                title="<%= element_record.tooltip %>"
+                                                        <% end %>
+                                                <% end %>
+                                                >
+                                                
+                                                <% # now branching by element type %>
+
+                                                <% case element_record.element_type %>
+                                                        <% # nothing, only style %>
+                                                        <% when 0 %>
+
+                                                        <% # plain text %>
+                                                        <% when 1 %>
+                                                                <p><%= element_generalvalue[0] %></p>
+                                                        <% # reference %>
+                                                        <% when 2 %>
+                                                                <a href="<%= element_record.click_action %>"><%= element_generalvalue[0] %></a>
+                                                        <% # picture %>
+                                                        <% when 3 %>
+                                                                <img src="<%= element_generalvalue[0] %>" alt="" title="<%= element_record.tooltip %>" style="max-width: 100%; height: auto;">
+                                                        <% # input text %>
+                                                        <% when 4 %>
+                                                                <input type="text" value="<%= element_generalvalue[0] %>" style="width: 100%; height: 100%%; box-sizing: border-box;">
+                                                        <% # button %>
+                                                        <% when 5 %>
+                                                                <button type="button" style="width: 100%; height: 100%;"><%= element_generalvalue[0] %></button>     
+                                                        <% when 6 %>
+                                                                <h1><%= element_generalvalue[0] %></h1>    
+                                                        <% when 7 %>
+                                                                <button type="button" style="width: 100%; height: 100%;"><img src="<%= element_generalvalue[0] %>"></button>  
+                                                        <% when 8 %>
+                                                                <h3><%= element_generalvalue[0] %></h3>
+                                                        <% when 9 %>
+                                                                <script>
+                                                                        setInterval(function() {
+                                                                                invokedataloadofelements(<%= element_record.upi_trigger %>);
+                                                                        }, <%= element_generalvalue[0] %>);
+                                                                </script>                             
+                                                        <% else %>
+                                                                <p>unknown element type</p>
+                                                <% end %>
+                                        
+                                        </div>
+
+        <% # 6. creation of element end             ----------------------------------------------------------------- %>
+
+                                <% end %>
+
+        <% # 5. branching of panel end              ----------------------------------------------------------------- %>
+
+                        <% end %>  
+
+                <% end %>   
+
+        <% # 4. branching of page end               ----------------------------------------------------------------- %>
+
+<% else %>
+        <p>Access Denied</p>
+<% end # usercontrolresult %>
+
+<% # final includes                         ----------------------------------------------------------------- %>
+
+<% if centeredpage == 1 %>
+</div>
+<% end %>
+
+<%= javascript_include_tag 'ajax_webfunctions' %>
+
+

@@ -1,0 +1,21 @@
+body {
+  background-color: #616d7e;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+body, p, input, button {
+  font-family: 'Press Start 2P', 'Lucida Console', 'Courier New', Monaco, 'Andale Mono', Consolas, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: 'Press Start 2P','Lucida Console', 'Courier New', Monaco, 'Andale Mono', Consolas, monospace;
+  font-size: 32px;
+  line-height: 1.5;
+}

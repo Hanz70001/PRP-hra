@@ -1,0 +1,5 @@
+contexts
+10 - vybrany editovany modul
+20 - vysledek tvorby družice
+21 - nazev nove vytvareneho satelitu
+22 - vybrany satelit

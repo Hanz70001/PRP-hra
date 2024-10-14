@@ -1,0 +1,19 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+body, p, input, button {
+  font-family: 'Courier New', Monaco, 'Andale Mono', Consolas, monospace;
+  font-size: 16px;
+}
+
+h3 {
+  font-family: 'Courier New', Monaco, 'Andale Mono', Consolas, monospace;
+  font-size: 32px;
+}
